@@ -24,6 +24,8 @@ Partial Class MainForm
     Private Sub InitializeComponent()
         Me.cmdDXDiag = New System.Windows.Forms.Button()
         Me.txtOutput = New System.Windows.Forms.TextBox()
+        Me.cmdMGADiag = New System.Windows.Forms.Button()
+        Me.cmdMSInfo32 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'cmdDXDiag
@@ -44,11 +46,31 @@ Partial Class MainForm
         Me.txtOutput.Size = New System.Drawing.Size(1263, 348)
         Me.txtOutput.TabIndex = 1
         '
+        'cmdMGADiag
+        '
+        Me.cmdMGADiag.Location = New System.Drawing.Point(252, 36)
+        Me.cmdMGADiag.Name = "cmdMGADiag"
+        Me.cmdMGADiag.Size = New System.Drawing.Size(187, 96)
+        Me.cmdMGADiag.TabIndex = 2
+        Me.cmdMGADiag.Text = "MGADiag"
+        Me.cmdMGADiag.UseVisualStyleBackColor = True
+        '
+        'cmdMSInfo32
+        '
+        Me.cmdMSInfo32.Location = New System.Drawing.Point(459, 36)
+        Me.cmdMSInfo32.Name = "cmdMSInfo32"
+        Me.cmdMSInfo32.Size = New System.Drawing.Size(175, 96)
+        Me.cmdMSInfo32.TabIndex = 3
+        Me.cmdMSInfo32.Text = "MSInfo32"
+        Me.cmdMSInfo32.UseVisualStyleBackColor = True
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1560, 699)
+        Me.Controls.Add(Me.cmdMSInfo32)
+        Me.Controls.Add(Me.cmdMGADiag)
         Me.Controls.Add(Me.txtOutput)
         Me.Controls.Add(Me.cmdDXDiag)
         Me.Name = "MainForm"
@@ -59,4 +81,6 @@ Partial Class MainForm
 
     Friend WithEvents cmdDXDiag As Button
     Friend WithEvents txtOutput As TextBox
+    Friend WithEvents cmdMGADiag As Button
+    Friend WithEvents cmdMSInfo32 As Button
 End Class

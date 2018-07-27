@@ -7,7 +7,7 @@ Module modDiagnostics
 
         Dim fileName As String = Path.GetTempPath + "WF_DXDiag.txt"
 
-        MessageBox.Show(Environment.SystemDirectory + "\dxdiag.exe" + " /t " + """" + fileName + """")
+        'MessageBox.Show(Environment.SystemDirectory + "\dxdiag.exe" + " /t " + """" + fileName + """")
 
         Dim DXDiag As System.Diagnostics.Process = System.Diagnostics.Process.Start(Environment.SystemDirectory + "\dxdiag.exe", " /t " + """" + fileName + """")
         Dim timeout As Integer = 60000 '1 minute in milliseconds
@@ -21,6 +21,26 @@ Module modDiagnostics
 
             Return fileReader
         End If
+    End Function
+    Public Function GetMSInfo32() As String
+        'msinfo32.exe /nfo file.nfo
+        Dim fileName As String = Path.GetTempPath + "WF_MSInfo32.nfo"
+
+        'MessageBox.Show(Environment.SystemDirectory + "\msinfo32.exe" + " /nfo " + """" + fileName + """")
+
+        Dim MSInfo32 As System.Diagnostics.Process = System.Diagnostics.Process.Start(Environment.SystemDirectory + "\msinfo32.exe", " /nfo " + """" + fileName + """")
+        Dim timeout As Integer = 60000 '1 minute in milliseconds
+
+        If Not MSInfo32.WaitForExit(timeout) Then
+            MessageBox.Show("MSINfo32 did not complete in a timely fashion")
+            Return "Timeout error collecting MSInfo32 information"
+        Else
+            Dim fileReader As String
+            fileReader = My.Computer.FileSystem.ReadAllText(fileName)
+
+            Return fileReader
+        End If
+
     End Function
 
 End Module
