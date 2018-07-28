@@ -42,5 +42,13 @@ Module modDiagnostics
         End If
 
     End Function
+    Public Function GetHosts() As String
+        Dim filename As String = Environment.SystemDirectory + "\drivers\etc\hosts"
+
+        Dim fileReader As String
+        fileReader = My.Computer.FileSystem.ReadAllText(filename)
+
+        Return fileReader
+    End Function
 
 End Module

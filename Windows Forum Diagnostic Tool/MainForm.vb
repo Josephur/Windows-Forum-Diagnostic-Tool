@@ -17,4 +17,8 @@
     Private Sub cmdMSInfo32_Click(sender As Object, e As EventArgs) Handles cmdMSInfo32.Click
         txtOutput.AppendText(GetMSInfo32)
     End Sub
+
+    Private Sub cmdHosts_Click(sender As Object, e As EventArgs) Handles cmdHosts.Click
+        txtOutput.AppendText(GetHosts)
+    End Sub
 End Class

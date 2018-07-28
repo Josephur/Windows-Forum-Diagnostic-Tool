@@ -26,6 +26,7 @@ Partial Class MainForm
         Me.txtOutput = New System.Windows.Forms.TextBox()
         Me.cmdMGADiag = New System.Windows.Forms.Button()
         Me.cmdMSInfo32 = New System.Windows.Forms.Button()
+        Me.cmdHosts = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'cmdDXDiag
@@ -64,11 +65,21 @@ Partial Class MainForm
         Me.cmdMSInfo32.Text = "MSInfo32"
         Me.cmdMSInfo32.UseVisualStyleBackColor = True
         '
+        'cmdHosts
+        '
+        Me.cmdHosts.Location = New System.Drawing.Point(654, 36)
+        Me.cmdHosts.Name = "cmdHosts"
+        Me.cmdHosts.Size = New System.Drawing.Size(177, 96)
+        Me.cmdHosts.TabIndex = 4
+        Me.cmdHosts.Text = "Hosts"
+        Me.cmdHosts.UseVisualStyleBackColor = True
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1560, 699)
+        Me.Controls.Add(Me.cmdHosts)
         Me.Controls.Add(Me.cmdMSInfo32)
         Me.Controls.Add(Me.cmdMGADiag)
         Me.Controls.Add(Me.txtOutput)
@@ -83,4 +94,5 @@ Partial Class MainForm
     Friend WithEvents txtOutput As TextBox
     Friend WithEvents cmdMGADiag As Button
     Friend WithEvents cmdMSInfo32 As Button
+    Friend WithEvents cmdHosts As Button
 End Class
