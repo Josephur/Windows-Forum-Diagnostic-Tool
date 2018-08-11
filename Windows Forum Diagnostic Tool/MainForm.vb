@@ -21,4 +21,8 @@
     Private Sub cmdHosts_Click(sender As Object, e As EventArgs) Handles cmdHosts.Click
         txtOutput.AppendText(GetHosts)
     End Sub
+
+    Private Sub cmdCPUZ_Click(sender As Object, e As EventArgs) Handles cmdCPUZ.Click
+        txtOutput.AppendText(GetCPUZ)
+    End Sub
 End Class

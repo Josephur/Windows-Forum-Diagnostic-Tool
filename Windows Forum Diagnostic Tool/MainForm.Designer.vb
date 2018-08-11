@@ -27,6 +27,7 @@ Partial Class MainForm
         Me.cmdMGADiag = New System.Windows.Forms.Button()
         Me.cmdMSInfo32 = New System.Windows.Forms.Button()
         Me.cmdHosts = New System.Windows.Forms.Button()
+        Me.cmdCPUZ = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'cmdDXDiag
@@ -74,11 +75,21 @@ Partial Class MainForm
         Me.cmdHosts.Text = "Hosts"
         Me.cmdHosts.UseVisualStyleBackColor = True
         '
+        'cmdCPUZ
+        '
+        Me.cmdCPUZ.Location = New System.Drawing.Point(862, 36)
+        Me.cmdCPUZ.Name = "cmdCPUZ"
+        Me.cmdCPUZ.Size = New System.Drawing.Size(177, 96)
+        Me.cmdCPUZ.TabIndex = 5
+        Me.cmdCPUZ.Text = "CPU-Z"
+        Me.cmdCPUZ.UseVisualStyleBackColor = True
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1560, 699)
+        Me.Controls.Add(Me.cmdCPUZ)
         Me.Controls.Add(Me.cmdHosts)
         Me.Controls.Add(Me.cmdMSInfo32)
         Me.Controls.Add(Me.cmdMGADiag)
@@ -95,4 +106,5 @@ Partial Class MainForm
     Friend WithEvents cmdMGADiag As Button
     Friend WithEvents cmdMSInfo32 As Button
     Friend WithEvents cmdHosts As Button
+    Friend WithEvents cmdCPUZ As Button
 End Class

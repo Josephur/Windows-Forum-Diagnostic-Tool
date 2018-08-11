@@ -1,0 +1,1 @@
+﻿Use generic Icon for known utility programs, until one can be extracted from downloaded program such as cpu-z if it's found

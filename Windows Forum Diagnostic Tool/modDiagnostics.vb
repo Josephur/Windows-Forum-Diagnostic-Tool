@@ -22,6 +22,26 @@ Module modDiagnostics
             Return fileReader
         End If
     End Function
+    Public Function GetCPUZ() As String
+        'cpuz.exe -txt=cpuz
+        Dim fileName As String = clsUtilities.appPath + "\downloads\cpuz.txt"
+
+        Dim CPUZ As System.Diagnostics.Process = System.Diagnostics.Process.Start(clsUtilities.appPath + "\downloads\cpuz.exe", "-txt=cpuz")
+        Dim timeout As Integer = 60000 '1 minute in milliseconds
+
+        If Not CPUZ.WaitForExit(timeout) Then
+            MessageBox.Show("CPU-Z did not complete in a timely fashion")
+            Return "Timeout error collecting CPU-Z information"
+        Else
+            Dim fileReader As String
+            fileReader = My.Computer.FileSystem.ReadAllText(fileName)
+
+            Return fileReader
+        End If
+
+
+    End Function
+
     Public Function GetMSInfo32() As String
         'msinfo32.exe /nfo file.nfo
         Dim fileName As String = Path.GetTempPath + "WF_MSInfo32.nfo"

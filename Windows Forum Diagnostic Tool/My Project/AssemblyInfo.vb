@@ -9,8 +9,8 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("Windows Forum Diagnostic Tool")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyDescription("Diagnostic tool for use by members of WnidowsForum.com")>
+<Assembly: AssemblyCompany("Stack-Teck, LLC")>
 <Assembly: AssemblyProduct("Windows Forum Diagnostic Tool")>
 <Assembly: AssemblyCopyright("Copyright © WindowsForum.com 2018")>
 <Assembly: AssemblyTrademark("")>
